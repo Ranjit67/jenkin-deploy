@@ -16,3 +16,24 @@ piplines{
         }
     }
 }
+
+pipeline {
+    agent any
+    
+    stages {
+        stage("compile"){
+            steps{
+                 echo "Compile programe"
+                 cd src
+                 javac App.java
+            }
+        }
+        stage("Run"){
+            steps{
+                 echo "Run programe"
+                 cd src
+                 javac App
+            }
+        }
+    }
+}
